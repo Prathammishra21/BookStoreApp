@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"xmlns:th="https://www.thymeleaf.com">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="full-screen-image">
+    <img src="/bg.png" alt="Background Image">
+</div>
+<nav>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="available_books">Available Books</a>
+        <a href="#My Books">My Books</a>
+        <a href="#about">About</a>
+        <div class="BookRegister">
+            <a href="book_register">New Books Register</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <h2>Book Information Form</h2>
+    <form id="myForm" action="#" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+        </div>
+        <div class="form-group">
+            <label for="edition">Edition:</label>
+            <input type="text" id="edition" name="edition" required>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required>
+        </div>
+        <div class="form-group">
+            <label for="publisher">Publisher:</label>
+            <input type="text" id="publisher" name="price" required>
+        </div>
+        <input type="submit" value="Submit">
+        <button type="button" value="Cancel" onclick="clearForm()">Cancel</button>
+    </form>
+</div>
+
+</body>
+</html>

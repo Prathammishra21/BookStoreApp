@@ -1,54 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"xmlns:th="https://www.thymeleaf.com">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Store</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="script.js"></script>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">Book Store</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="available_books">Available Books</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="my_books">My Books</a>
-                </li>
-            </ul>
-            <div>
-                <a class="nav-link" href="book_register">New Book Register</a>
-            </div>
-        </div>
+<nav>
+<div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="available_books">Available Books</a>
+    <a href="#My Books">My Books</a>
+    <a href="#about">About</a>
+    <div class="BookRegister">
+        <a href="book_register">New Books Register</a>
     </div>
+</div>
 </nav>
-
-<div class="container text-center my-5">
+<div class="container-fluid text-center my-5">
     <div class="text-content">
-        <h1>WELCOME TO NEW BOOK STORE</h1>
-        <h6>Lorem ipsum dolor sit amet .
-            The graphic and typographic operators know this well, in reality all the professions
-            dealing with the universe of communication have a stable relationship with these words,
-            but what is it? Lorem ipsum is a dummy text without any sense. It is a sequence of Latin
-            words that, as they are positioned, do not form sentences with a complete sense, but give
-            life to a test text useful to fill spaces that will subsequently be occupied from ad hoc
-            texts composed by communication professionals. It is certainly the most famous placeholder
-            text even if there are different versions distinguishable from the order in which the
-            Latin words are repeated.
-        </h6>
+        <h1>WELCOME TO INK & PAPER BOOKSTORE</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis
+            sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+            Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos.
+        </p>
     </div>
-    <img src="/bg.png" alt="Background Image">
+    <div class="full-screen-image">
+        <img src="/bg.png" alt="Background Image">
+    </div>
 </div>
 
 </body>
