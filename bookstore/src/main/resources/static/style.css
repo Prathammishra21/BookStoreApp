@@ -174,3 +174,18 @@
                        }
 
 
+// bookedit page css
+/* styles.css */
+#editBookContainer {
+    border: 1px solid black;
+}
+
+#editBookForm {
+    margin-top: 5%;
+}
+
+.btn-primary {
+    margin-top: 10px;
+}
+
+

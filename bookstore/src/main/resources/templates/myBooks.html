@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Store</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </head>
 <body>
 <nav>
@@ -19,6 +19,35 @@
         </div>
     </div>
 </nav>
+
+<div class="container my-5 col-md-6">
+    <table class="table  table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Edition</th>
+            <th scope="col">Price</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="b :${book}">
+            <td th:text="${b.id}"></td>
+            <td th:text="${b.name}"></td>
+            <td th:text="${b.author}"></td>
+            <td th:text="${b.edition}"></td>
+            <td th:text="${b.price}"></td>
+            <td th:text="${b.publisher}"></td>
+            <td><a style="color:red" th:href="@{/deleteMyList/{id}(id=${b.id})}"><i class="fa-solid fa-trash"></i></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
 
     <div class="full-screen-image">
         <img src="/bg.png" alt="Background Image">

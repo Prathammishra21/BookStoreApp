@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Book {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private int id;
+    private int id;
     private String name;
     private String author;
     private int edition;
