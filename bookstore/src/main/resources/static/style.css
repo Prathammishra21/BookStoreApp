@@ -188,4 +188,9 @@
     margin-top: 10px;
 }
 
+a.delete-link {
+    color: red;
+    /* Additional CSS styling */
+}
+
 
