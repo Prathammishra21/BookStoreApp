@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import java.util.List;
 
 
+
 @Controller
 public class BookController {
     @Autowired
@@ -80,5 +81,13 @@ public class BookController {
         }
     }
 
+       @GetMapping("/login")
+          public String login() {
+          return "login";
+             }
 
+             @GetMapping("/")
+            public String home() {
+            return "home";
+             }
 
