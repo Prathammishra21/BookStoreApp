@@ -35,6 +35,15 @@
         </thead>
         <tbody>
         <!-- Assuming 'book' is an array of objects with properties id, name, author, edition, price, and publisher -->
+        <tr th:each="b :${book}">
+            <td th:text="${b.id}"></td>
+            <td th:text="${b.name}"></td>
+            <td th:text="${b.author}"></td>
+            <td th:text="${b.edition}"></td>
+            <td th:text="${b.price}"></td>
+            <td th:text="${b.publisher}"></td>
+            <td><a style="color:red" th:href="@{/deleteMyList/{id}(id=${b.id})}"><i class="fa-solid fa-trash"></i></a></td>
+        </tr>
         <tr>
             <td>1</td>
             <td>Java Fundamentals</td>
@@ -42,7 +51,10 @@
             <td>2023</td>
             <td>$10</td>
             <td>Arihant</td>
-            <td><span class="delete-button">Delete</span></td>
+            <td>
+               <button id="deleteButton"class="btn btn-third">Delete</button>
+            </td>
+
         </tr>
         <!-- Repeat the above row for each book -->
         </tbody>
