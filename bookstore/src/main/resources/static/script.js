@@ -7,9 +7,7 @@
         x.className = "topnav";
       }
     }
-            function clearForm() {
-                document.getElementById("myForm").reset();
-            }
+
 
             // edit-book.js
             document.addEventListener("DOMContentLoaded", function () {

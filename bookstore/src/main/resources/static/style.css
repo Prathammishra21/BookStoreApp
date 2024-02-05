@@ -174,25 +174,6 @@
                        }
 
 
-// bookedit page css
-/* styles.css */
-#editBookContainer {
-    border: 1px solid black;
-}
-
-#editBookForm {
-    margin-top: 5%;
-}
-
-.btn-primary {
-    margin-top: 10px;
-}
-
-a.delete-link {
-    color: red;
-    /* Additional CSS styling */
-}
-
 
 /* Define styles for form labels */
 .form-label {
@@ -253,5 +234,35 @@ a.delete-link {
     color: white;
 }
 
+ .container {
+            margin-top: 5rem;
+        }
+
+        /* Style for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style for delete button */
+        .delete-button {
+            color: red;
+            cursor: pointer;
+        }
+
+        .delete-button:hover {
+            text-decoration: underline;
+        }
 
 
