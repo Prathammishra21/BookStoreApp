@@ -1,26 +1,11 @@
-.topnav {
-    overflow: hidden;
-    background-color: #6ecbcb;
-  }
 
-  .topnav a {
-    float: left;
-    color: #000000d2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 18px;
-  }
    .BookRegister{
       position: absolute;
       right: 0;
 
     }
 
-  .topnav a:hover {
-    background-color: #ffffff80;
-    color: rgb(16, 16, 16);
-  }
+
 
   .blur-background {
       background-image: url('bg.jpg');
@@ -265,4 +250,7 @@
             text-decoration: underline;
         }
 
-
+.container12 {
+            max-width: 800px;
+            margin: 0 auto;
+        }

@@ -37,6 +37,10 @@ public class BookController {
     public String bookRegister(){
         return "bookRegister";
     }
+    @GetMapping("/about_us")
+    public String aboutus(){
+        return "aboutus";
+    }
 
 
     @GetMapping("/available_books")
