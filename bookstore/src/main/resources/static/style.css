@@ -18,6 +18,8 @@
       margin: 0;
       padding: 0;
       height: 100%;
+      font-family: Arial, sans-serif;
+
   }
 
 
@@ -39,6 +41,17 @@
       top: 0;
       left: 0;
   }
+full-screen1-image {
+    margin: 0;
+    padding: 0;
+    background-image: url('available.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This ensures the background image stays fixed */
+    font-family: Arial, sans-serif;
+}
+
+/* Additional styling for other elements can go below */
 
 
 
@@ -67,12 +80,6 @@
 
 
 /* CSS styling for bookRegister page*/
- body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
         .container {
             max-width: 500px;
             margin: 50px auto;
@@ -186,7 +193,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #4CAF50;
 }
 
 /* Center the form button */
