@@ -41,4 +41,36 @@
                     // sendDataToServer(bookData);
                 });
             });
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('registerButton').addEventListener('click', function() {
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        // Perform validation if needed
+
+        // Example: Sending data to server using fetch API
+        fetch('/registration', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle response
+            console.log(data);
+            // Optionally, redirect to another page
+            // window.location.href = '/success';
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});
 

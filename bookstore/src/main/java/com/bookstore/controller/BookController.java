@@ -45,49 +45,39 @@ public class BookController {
         return new ModelAndView("bookList", "book", list);
     }
 
-        @PostMapping("/save")
-                public String addBook(@ModelAttribute Book b){
-            service.save(b);
-            return "redirect:/available_books";
-        }
+    @PostMapping("/save")
+    public String addBook(@ModelAttribute Book b){
+        service.save(b);
+        return "redirect:/available_books";
+    }
 
-        @GetMapping("/my_Books")
+    @GetMapping("/my_Books")
     public String myBooks(Model model){
         List<MyBookList>myList=myBookService.getAllMyBooks();
         model.addAttribute("bookList",myList);
         return "my_Books";
-        }
+    }
 
 
 
     @RequestMapping("/myList/{id}")
     public String getMyList(@PathVariable("id") int id) {
         Book b = service.getBookById(id);
-        MyBookList mb = new MyBookList(b.getId(), b.getName(), b.getAuthor(), b.getEdition(),b.getPrice(),b.getPublisher());
+        MyBookList mb = new MyBookList(b.getId(), b.getName(), b.getAuthor(),
+                b.getEdition(),b.getPrice(),b.getPublisher());
         myBookService.saveMyBooks(mb);
         return "redirect:/my_Books";
     }
-        @RequestMapping("/editBook/{id}")
-        public String editBook(@PathVariable("id") int id,Model model) {
-            Book b=service.getBookById(id);
-            model.addAttribute("book",b);
-            return "bookEdit";
-        }
-
-        @RequestMapping("/deleteBook/{id}")
-        public String deleteBook(@PathVariable("id")int id) {
-            service.deleteById(id);
-            return "redirect:/available_books";
-        }
+    @RequestMapping("/editBook/{id}")
+    public String editBook(@PathVariable("id") int id,Model model) {
+        Book b=service.getBookById(id);
+        model.addAttribute("book",b);
+        return "bookEdit";
     }
 
-       @GetMapping("/login")
-          public String login() {
-          return "login";
-             }
-
-             @GetMapping("/")
-            public String home() {
-            return "home";
-             }
-
+    @RequestMapping("/deleteBook/{id}")
+    public String deleteBook(@PathVariable("id")int id) {
+        service.deleteById(id);
+        return "redirect:/available_books";
+    }
+}
