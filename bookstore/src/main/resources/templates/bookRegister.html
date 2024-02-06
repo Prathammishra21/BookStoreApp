@@ -1,14 +1,17 @@
-<!doctype html>
-<html lang="en"xmlns:th="https://www.thymeleaf.com">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Book Store</title>
     <link rel="stylesheet" href="style.css">
+    <script src ="script.js"></script>
 
+    <title>Book Store</title>
 </head>
 <body>
-
+<div class="full-screen-image">
+    <img src="register.png" alt="Background Image">
+</div>
 <nav>
     <div class="topnav">
         <a class="active" href="/">Home</a>
@@ -17,13 +20,14 @@
         <a href="about_us">About</a>
         <div class="BookRegister">
             <a href="book_register">New Books Register</a>
-
         </div>
     </div>
 </nav>
-<div class="container">
-    <h2>Book Information Form</h2>
-    <form id="myForm" th:action="@{/save}" method="post">
+
+</div>
+<div class="container10">
+    <center> <h2>Book Information Form</h2></center>
+    <form class="col-md-6 offset-md-3" th:action="@{/save}" method="post" onsubmit="return validateForm()">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -42,17 +46,15 @@
         </div>
         <div class="form-group">
             <label for="publisher">Publisher:</label>
-            <input type="text" id="publisher" name="price" required>
+            <input type="text" id="publisher" name="publisher" required>
         </div>
-        <input type="submit" value="Submit">
-        <button type="button" value="Cancel" onclick="clearForm()">Cancel</button>
+        <center> <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <button type="submit" value="Cancel" onclick="clearForm()">Cancel</button>
+        </div></center>
     </form>
 </div>
-<script src="/script.js"></script>
-<script>
-    function clearForm() {
-        document.getElementById("myForm").reset();
-    }
-</script>
+
 </body>
 </html>

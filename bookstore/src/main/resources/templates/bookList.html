@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Book Registration at Ink And Paper Bookstore</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Book Store</title>
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://kit.fontawesome.com/0faddc1af8.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+<div class="full-screen-image">
+    <img src="available.jpg" alt="Background Image">
+</div>
 <nav>
     <div class="topnav">
         <a class="active" href="/">Home</a>
@@ -19,67 +27,40 @@
         </div>
     </div>
 </nav>
-<div class="container my-5 p-5" style="border: 1px solid black;">
-    <h3 class="text-center">Available Books in Ink and Paper Bookstore</h3>
-    <form class="col-md-4 offset-md-4" action="@{/save}" method="post">
-        <table class="table">
-            <tbody>
-            <tr>
-                <td><label for="name" class="form-label">Name:</label></td>
-                <td><input type="text" class="form-control" name="name" placeholder="Enter book name" id="name"></td>
-            </tr>
-            <tr>
-                <td><label for="author" class="form-label">Author:</label></td>
-                <td><input type="text" class="form-control" name="author" placeholder="Enter author name" id="author"></td>
-            </tr>
-            <tr>
-                <td><label for="edition" class="form-label">Edition:</label></td>
-                <td><input type="text" class="form-control" name="edition" placeholder="Enter the edition" id="edition"></td>
-            </tr>
-            <tr>
-                <td><label for="price" class="form-label">Price:</label></td>
-                <td><input type="text" class="form-control" name="price" placeholder="Enter price of a book" id="price"></td>
-            </tr>
-            <tr>
-                <td><label for="publisher" class="form-label">Publisher:</label></td>
-                <td><input type="text" class="form-control" name="publisher" placeholder="Enter publisher name" id="publisher"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <center>
-                        <button type="submit" class="btn btn-primary">Add to Mybook</button>
-                        <button id="editButton" class="btn btn-secondary">Edit</button>
-                        <button id="deleteButton" class="btn btn-danger">Delete</button>
-                    </center>
-                </td>
 
+<div class="container6">
+    <table class="table  table-striped table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Edition</th>
+            <th scope="col">Price</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="b :${book}">
+            <td th:text="${b.id}"></td>
+            <td th:text="${b.name}"></td>
+            <td th:text="${b.author}"></td>
+            <td th:text="${b.edition}"></td>
+            <td th:text="${b.price}"></td>
+            <td th:text="${b.publisher}"></td>
+            <td><a class="btn btn-secondary btn-sm" th:href="@{/mylist/{id}(id=${b.id})}">Add to my books</a>
+                <a style="color:blue" th:href="@{/editBook/{id}(id=${b.id})}"><i
+                        class="fa-solid fa-pen-to-square ms-4"></i></a>
+                <a style="color:red" th:href="@{/deleteBook/{id}(id=${b.id})}"><i
+                        class="fa-solid fa-trash ms-4"></i></a>
+            </td>
 
-            </tr>
-            </tbody>
-        </table>
-    </form>
+        </tr>
+
+        </tbody>
+    </table>
 </div>
-
-<div class="full-screen-image">
-    <img src="available.png" alt="Background Image">
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const editButton = document.getElementById('editButton');
-    const deleteButton = document.getElementById('deleteButton');
-
-    editButton.addEventListener('click', function () {
-        // Replace this with your edit functionality
-        alert('Edit button clicked');
-    });
-
-    deleteButton.addEventListener('click', function () {
-        // Replace this with your delete functionality
-        alert('Delete button clicked');
-    });
-});
-
-</script>
-
 </body>
+
 </html>

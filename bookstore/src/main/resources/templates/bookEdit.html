@@ -1,18 +1,21 @@
 <!doctype html>
-<html lang="en"xmlns:th="https://www.thymeleaf.com">
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Book Store</title>
     <link rel="stylesheet" href="style.css">
-
+    <title>Book Store</title>
 </head>
 <body>
+<div class="full-screen-image">
+    <img src="mybook.png" alt="Background Image">
+</div>
 <nav>
     <div class="topnav">
         <a class="active" href="/">Home</a>
         <a href="available_books">Available Books</a>
-        <a href="my_Books">My Books</a>
+        <a href="my_books">My Books</a>
         <a href="about_us">About</a>
         <div class="BookRegister">
             <a href="book_register">New Books Register</a>
@@ -20,38 +23,35 @@
     </div>
 </nav>
 
-<!-- edit-book.html -->
-<div class="container my-5 p-5" id="editBookContainer">
-    <h4 class="text-center">Edit Book Here</h4>
-    <form class="col-md-4 offset-md-4" id="editBookForm">
-        <input type="hidden" name="id" id="bookIdInput">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" id="name">
-        </div>
-        <div class="mb-3">
-            <label for="author" class="form-label">Author</label>
-            <input type="text" class="form-control" name="author" id="Author">
-        </div>
-        <div class="mb-3">
-            <label for="author" class="form-label">Edition</label>
-            <input type="text" class="form-control" name="author" id="Edition">
-        </div>
-        <div class="mb-3">
-            <label for="Price" class="form-label">Price</label>
-            <input type="text" class="form-control" name="price" id="Price">
-        </div>
-        <div class="mb-3">
-            <label for="author" class="form-label">Publisher</label>
-            <input type="text" class="form-control" name="author" id="Publisher">
-        </div>
-        <center><button type="submit" class="btn btn-primary">Submit</button></center>
-    </form>
+<div class="container9" ">
+<h4>Edit Book Here</h4>
+<form class="col-md-4 offset-md-4" th:action="@{/save}" method="post" th:object="${book}">
+
+    <input type="hidden" name="id" th:value="${book.id}"/>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name: </label>
+        <input type="text" id="name" class="form-control" name="name" th:value="${book.name}">
+    </div>
+
+    <div class="mb-3">
+        <label for="author" class="form-label">Author:</label>
+        <input type="text" id="author"  class="form-control" name="author" th:value="${book.author}">
+    </div>
+    <div class="mb-3">
+        <label for="edition" class="form-label">Edition:</label>
+        <input type="text" id="edition"  class="form-control" name="edition" th:value="${book.edition}">
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price:</label>
+        <input type="text" id="price"   class="form-control" name="price" th:value="${book.price}">
+    </div>
+    <div class="mb-3">
+        <label for="publisher" class="form-label">Publisher:</label>
+        <input type="text" id="publisher"  class="form-control" name="publisher" th:value="${book.publisher}">
+    </div>
+    <center><button type="submit" class="btn btn-primary">Submit</button></center>
+</form>
 </div>
 
-
-
-</div>
-<script src="/script.js"></script>
 </body>
 </html>
