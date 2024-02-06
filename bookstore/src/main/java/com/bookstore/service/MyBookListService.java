@@ -12,7 +12,7 @@ public class MyBookListService {
     @Autowired
     private MyBookRepository mybook;
 
-    public void saveMyBooks(MyBookList book) {
+    public void saveMyBooks(MyBookList book)     {
         mybook.save(book);
     }
 
