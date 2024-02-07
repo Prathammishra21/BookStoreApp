@@ -52,7 +52,7 @@ full-screen1-image {
 /* CSS styling for bookRegister page*/
 .container10 {
     max-width: 450px;
-    margin: 50px auto;
+    margin: 120px auto;
     padding: 20px;
     background-color: peachpuff;
     border-radius: 35px;
@@ -157,6 +157,7 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     text-align: center;
+    border-radius:25px;
 }
 
 th,
