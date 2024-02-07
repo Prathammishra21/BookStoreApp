@@ -215,20 +215,36 @@ tr {
     background-color: #4CAF50;
 }
 
-.container9 {
+#container9 {
     margin: 50px auto;
     width: 30%;
     padding: 20px;
     background-color: peachpuff;
     border-radius: 25px;
 }
+.full-screen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.full-screen-image img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 h4{
     text-align: center;
     font-size: 30px;
 }
 
-
-/* Style form elements */
 .form-label {
     font-weight: bold;
 }

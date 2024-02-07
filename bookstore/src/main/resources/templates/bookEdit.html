@@ -4,13 +4,289 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .BookRegister {
+       position: absolute;
+       right: 0;
+
+   }
+
+   body,
+   html {
+       margin: 0;
+       padding: 0;
+       height: 100%;
+       font-family: Arial, sans-serif;
+
+   }
+
+   .full-screen-image {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+       /* Ensures the image is behind other content */
+       overflow: hidden;
+       /* Hide any overflowing image */
+   }
+
+   .full-screen-image img {
+       min-width: 100%;
+
+       min-height: 100%;
+
+       object-fit: cover;
+
+       position: absolute;
+       top: 0;
+       left: 0;
+   }
+
+   full-screen1-image {
+       margin: 0;
+       padding: 0;
+       background-image: url('edit.png');
+       /* Path to your background image */
+       background-size: cover;
+       background-position: center;
+       background-attachment: fixed;
+       /* This ensures the background image stays fixed */
+       font-family: Arial, sans-serif;
+   }
+
+   /* Home page styles */
+   .text-content {
+       max-width: 800px;
+       margin: 0 auto;
+   }
+
+   .text-content h1 {
+       font-family: 'Courier New', Courier, monospace;
+       padding: 30px;
+       font-size: 50px;
+       text-align: center;
+
+   }
+
+   .text-content p {
+       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+       color: rgba(4, 4, 4, 0.823);
+       font-size: 18px;
+       line-height: 1.8;
+       font-weight: bold;
+   }
+
+
+   /* CSS styling for bookRegister page*/
+   .container10 {
+       max-width: 450px;
+       margin: 50px auto;
+       padding: 20px;
+       background-color: peachpuff;
+       border-radius: 35px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .form-group {
+       margin-bottom: 20px;
+   }
+
+   label {
+       display: block;
+       margin-bottom: 5px;
+   }
+
+   input[type="text"] {
+       width: 80%;
+       padding: 8px;
+       border: 0.1px solid rgb(75, 28, 28);
+       border-radius: 25px;
+   }
+
+   input[type="submit"] {
+       background-color: #4CAF50;
+       color: rgb(0, 0, 0);
+       padding: 10px 20px;
+       border: none;
+       border-radius: 20px;
+       cursor: pointer;
+   }
+
+   input[type="submit"]:hover {
+       background-color: #45a049;
+   }
+
+   /* Style for navigation links */
+   .topnav {
+       overflow: hidden;
+       background-color: #333;
+   }
+
+   .topnav a {
+       float: left;
+       display: block;
+       color: #f2f2f2;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+   }
+
+   .topnav a:hover {
+       background-color: peachpuff;
+       color: black;
+   }
+
+   .topnav a.active {
+       background-color: #8f6161;
+       color: white;
+   }
+
+
+   .container7 {
+       margin: 20px auto;
+       width: 80%;
+       padding-top: 50px;
+   }
+
+   table {
+       width: 100%;
+       border-collapse: separate;
+       border-spacing: 0;
+       text-align: center;
+   }
+
+   th,
+   td {
+       padding: 17px;
+       text-align: center;
+       border-bottom: 1px solid peachpuff;
+       border-top: 1px solid peachpuff;
+       border-left: 1px solid peachpuff;
+       border-right: 1px solid peachpuff;
+   }
+
+   th {
+       background-color: #8f6161;
+       color: #fff;
+   }
+
+   tr {
+       background-color: #ffecec;
+   }
+
+   .container6 {
+       margin: 20px auto;
+       width: 80%;
+       padding-top: 50px;
+   }
+
+   table {
+       width: 100%;
+       border-collapse: separate;
+       border-spacing: 0;
+       text-align: center;
+   }
+
+   th,
+   td {
+       padding: 17px;
+       text-align: center;
+       border-bottom: 1px solid peachpuff;
+       border-top: 1px solid peachpuff;
+       border-left: 1px solid peachpuff;
+       border-right: 1px solid peachpuff;
+   }
+
+   th {
+       background-color: #8f6161;
+       color: #fff;
+   }
+
+   tr {
+       background-color: #ffecec;
+   }
+
+
+
+   /* Buttons */
+   .btn-secondary {
+       background-color: #0080ff;
+       color: #ffffff;
+       padding: 8px 16px;
+       border-radius: 15px;
+   }
+
+   .btn-secondary:hover {
+       background-color: #4CAF50;
+   }
+
+   #container9 {
+       margin: 50px auto;
+       width: 30%;
+       padding: 20px;
+       background-color: peachpuff;
+       border-radius: 25px;
+          background-image: url('edit.png');
+           background-size: cover;
+           background-position: center;
+           position: relative;
+   }
+   .full-screen-image {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+       overflow: hidden;
+   }
+
+   .full-screen-image img {
+       min-width: 100%;
+       min-height: 100%;
+       object-fit: cover;
+       position: absolute;
+       top: 0;
+       left: 0;
+   }
+   h4{
+       text-align: center;
+       font-size: 30px;
+   }
+
+   .form-label {
+       font-weight: bold;
+   }
+
+   .form-control {
+       margin: 5px 0;
+       border: 1px solid #744848;
+       border-radius: 5px;
+       box-sizing: border-box;
+   }
+
+   .btn-primary {
+       background-color: #46b1d2;
+       color: rgb(255, 255, 255);
+       padding: 10px 20px;
+       border: none;
+       border-radius: 15px;
+       cursor: pointer;
+   }
+
+   .btn-primary:hover {
+       background-color: #4bc251;
+   }
+
+
+    </style>
     <title>Book Store</title>
+
 </head>
 <body>
-<div class="full-screen-image">
-    <img src="mybook.png" alt="Background Image">
-</div>
+
 <nav>
     <div class="topnav">
         <a class="active" href="/">Home</a>
@@ -23,35 +299,37 @@
     </div>
 </nav>
 
-<div class="container9" ">
-<h4>Edit Book Here</h4>
-<form class="col-md-4 offset-md-4" th:action="@{/save}" method="post" th:object="${book}">
+<div id="container9">
+    <h4>Edit Book Here</h4>
+    <form class="col-md-4 offset-md-4" th:action="@{/save}" method="post" th:object="${book}">
 
-    <input type="hidden" name="id" th:value="${book.id}"/>
-    <div class="mb-3">
-        <label for="name" class="form-label">Name: </label>
-        <input type="text" id="name" class="form-control" name="name" th:value="${book.name}">
-    </div>
+        <input type="hidden" name="id" th:value="${book.id}"/>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name: </label>
+            <input type="text" id="name" class="form-control" name="name" th:value="${book.name}">
+        </div>
 
-    <div class="mb-3">
-        <label for="author" class="form-label">Author:</label>
-        <input type="text" id="author"  class="form-control" name="author" th:value="${book.author}">
-    </div>
-    <div class="mb-3">
-        <label for="edition" class="form-label">Edition:</label>
-        <input type="text" id="edition"  class="form-control" name="edition" th:value="${book.edition}">
-    </div>
-    <div class="mb-3">
-        <label for="price" class="form-label">Price:</label>
-        <input type="text" id="price"   class="form-control" name="price" th:value="${book.price}">
-    </div>
-    <div class="mb-3">
-        <label for="publisher" class="form-label">Publisher:</label>
-        <input type="text" id="publisher"  class="form-control" name="publisher" th:value="${book.publisher}">
-    </div>
-    <center><button type="submit" class="btn btn-primary">Submit</button></center>
-</form>
+        <div class="mb-3">
+            <label for="author" class="form-label">Author:</label>
+            <input type="text" id="author"  class="form-control" name="author" th:value="${book.author}">
+        </div>
+        <div class="mb-3">
+            <label for="edition" class="form-label">Edition:</label>
+            <input type="text" id="edition"  class="form-control" name="edition" th:value="${book.edition}">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="text" id="price"   class="form-control" name="price" th:value="${book.price}">
+        </div>
+        <div class="mb-3">
+            <label for="publisher" class="form-label">Publisher:</label>
+            <input type="text" id="publisher"  class="form-control" name="publisher" th:value="${book.publisher}">
+        </div>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </form>
 </div>
-
+<div class="full-screen-image">
+    <img src="edit.png" alt="Background Image">
+</div>
 </body>
 </html>
