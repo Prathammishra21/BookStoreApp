@@ -1,13 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.com">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Store</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+          background-color: #8f6161;
+        }
+
+          header {
+              background-color: #8f6161;
+              padding: 10px;
+              text-align: center;
+              margin-bottom: 0px;
+
+          }
+
+          header h1 {
+              font-size: 2em;
+              color: #f5f4f4;
+          }
+
+          nav ul {
+              list-style-type: none;
+          }
+
+          nav ul li {
+              display: inline;
+              margin-right: 20px;
+          }
+
+          nav ul li a {
+              text-decoration: none;
+              color: rgb(186, 229, 236);
+              font-weight: bold;
+          }
+
+          nav ul li a:hover {
+              color: rgb(25, 24, 24);
+          }
+
+          section {
+              text-align: center;
+              padding-top: 30px; /* Add padding to prevent content from overlapping with the fixed background */
+
+          }
+
+          #about, #contact{
+              padding-top: 20px;
+              padding-bottom: 20px;
+              background-color: #8f6161;
+              color: #ffffff;
+
+          }
+           #hero, #books {
+              padding-top: 20px;
+              padding-bottom: 20px;
+              background-color: peachpuff;
+              color: #444242;
+
+          }
+
+          .btn {
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: #474040;
+              color: #fff7f7;
+              text-decoration: none;
+              border-radius: 5px;
+              transition: background-color 0.3s ease;
+          }
+
+          .btn:hover {
+              background-color: rgb(0, 0, 0);
+          }
+
+          footer {
+              background-color: #363636;
+              color: #fff;
+              padding: 5px;
+          }
+          img {
+              width: 100%; /* Adjust the width of the image */
+              display: block;
+              position: relative;
+              height: 70%;
+              margin-bottom: -20px;
+              padding-top: 0px;
+          }
+    </style>
 </head>
+
 <body>
+
 <nav>
     <div class="topnav">
         <a class="active" href="/">Home</a>
@@ -19,21 +107,50 @@
         </div>
     </div>
 </nav>
-<div class="container-fluid text-center my-5">
-    <div class="text-content">
-        <h1>WELCOME TO INK & PAPER BOOKSTORE</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
-            Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis
-            sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-            Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos.
-        </p>
-    </div>
-    <div class="full-screen-image">
-        <img src="bg.png" alt="Background Image">
-    </div>
-</div>
 
+<img src="profilepg.png"  alt="pic" >
+<section id="heading">
+    <header>
+        <h1>Ink and Paper Bookstore</h1>
+        <nav>
+            <ul>
+                <li><a href="/about_us"><u>About Us</u></a></li>
+                <li><a href="/available_books"><u>Browse Books</u></a></li>
+                <li><a href="/my_books"><u>My Books</u></a></li>
+            </ul>
+        </nav>
+    </header>
+</section>
+
+<section id="hero">
+    <h2>Welcome to Ink and Paper Bookstore</h2>
+    <p>Discover your next great read with us!</p><br>
+    <a href="/available_books" class="btn">Explore Books</a>
+</section>
+
+<section id="about">
+    <h1>About Us</h1>
+    <p>Welcome to Ink and Paper Bookstore, your one-stop destination for a wide range of books across various
+        genres. Our bookstore is committed to providing book lovers with an enriching experience, whether you are
+        searching for classics, bestsellers, or hidden gems.</p>
+</section>
+
+<section id="books">
+    <h2>Discover Our Collection</h2>
+    <p>Explore our curated collection of books, featuring the latest releases and timeless classics. From fiction to
+        non-fiction, young adult to mystery, we have something for every reader.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or suggestion? Feel free to reach out to us!</p>
+    <p>Email: mishrapratham119@gmail.com</p>
+    <p>Phone: +91 8090141376</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Ink and Paper Bookstore. All rights reserved.</p>
+</footer>
 </body>
+
 </html>
