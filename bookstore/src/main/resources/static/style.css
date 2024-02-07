@@ -263,7 +263,9 @@ h4{
     margin-bottom: 20px;
      font-size: 30px;
 }
-
+body{
+    background-color: rgb(232, 171, 171);
+}
  h2 {
 margin-top:7px;
     font-size: 30px;
