@@ -7,20 +7,24 @@ import jakarta.persistence.Id;
 
 @Entity
 public class User {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String name;
 
     private String mobileNo;
 
+    private String email;
+
     private String password;
 
-    public User(int id, String name, String mobileNo, String password) {
+
+    public User(int id, String name, String mobileNo, String email, String password) {
         this.id = id;
         this.name = name;
         this.mobileNo = mobileNo;
+        this.email = email;
         this.password = password;
     }
 
@@ -48,6 +52,14 @@ public class User {
         this.mobileNo = mobileNo;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -62,6 +74,7 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", mobileNo='" + mobileNo + '\'' +
+                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
