@@ -19,7 +19,7 @@ public class User {
 
     private String password;
 
-
+ private String role;
     public User(int id, String name, String mobileNo, String email, String password) {
         this.id = id;
         this.name = name;
@@ -66,6 +66,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
