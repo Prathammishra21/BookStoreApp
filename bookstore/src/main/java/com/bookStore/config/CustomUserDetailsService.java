@@ -15,7 +15,7 @@ private UserRepo userRepo;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
         User user =  userRepo.findByEmail(username);
-
+        System.out.println(user);
         if(user == null){
             throw new UsernameNotFoundException("User not found");
         }else {

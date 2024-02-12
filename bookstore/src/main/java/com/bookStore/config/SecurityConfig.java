@@ -12,6 +12,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -30,13 +31,18 @@ public class SecurityConfig {
         return daoAuthenticationProvider;
     }
 
+
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeHttpRequests().
-                requestMatchers("/", "/register", "/login", "/saveUser", "/bookEdit", "/available_books", "/about_us", "/my_books", "/book_register").permitAll()
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception
+    {
+        http
+                .authorizeRequests().requestMatchers("/","/register","/login","/saveUser","available_books","my_books","book_register","about_us").permitAll()
                 .requestMatchers("/user/**").authenticated().and()
-                .formLogin().loginPage("/login").loginProcessingUrl("/userLogin")
-                .defaultSuccessUrl("/user/profile").permitAll();
+                .formLogin((form)-> form
+                        .loginPage("/login").loginProcessingUrl("/userLogin")
+                //.usernameParameter("email")
+                .defaultSuccessUrl("/user/profile").permitAll());
         return http.build();
     }
+
 }

@@ -1,5 +1,6 @@
 package com.bookStore.config;
 
+
 import com.bookStore.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -7,9 +8,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Arrays;
 import java.util.Collection;
+
+
 public class CustomUser implements UserDetails {
 
-  private User user;
+    private User user;
+
     public CustomUser(User user) {
         super();
         this.user = user;
@@ -52,4 +56,5 @@ public class CustomUser implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }
