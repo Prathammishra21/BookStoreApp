@@ -302,7 +302,7 @@ a {
 }
 /* Reset default browser styles */
 
-    .container p-3 {
+    .container p-3,p-4 {
             margin-top: 50px;
         }
         .card {

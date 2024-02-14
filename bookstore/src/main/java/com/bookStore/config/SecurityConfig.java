@@ -19,30 +19,31 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService getDetailsService() {
+    public UserDetailsService userDetailsService() {
         return new CustomUserDetailsService();
     }
 
     @Bean
-    public DaoAuthenticationProvider getAuthenticationProvider() {
-        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-        daoAuthenticationProvider.setUserDetailsService(getDetailsService());
-        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
-        return daoAuthenticationProvider;
+    public DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+        authenticationProvider.setUserDetailsService(userDetailsService());
+        authenticationProvider.setPasswordEncoder(passwordEncoder());
+        return authenticationProvider;
     }
-
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception
-    {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests().requestMatchers("/","/register","/login","/saveUser","available_books","my_books","book_register","about_us").permitAll()
-                .requestMatchers("/user/**").authenticated().and()
-                .formLogin((form)-> form
-                        .loginPage("/login").loginProcessingUrl("/userLogin")
-                //.usernameParameter("email")
-                .defaultSuccessUrl("/user/profile").permitAll());
+                .authorizeRequests()
+                .antMatchers("/", "/register", "/login", "/saveUser", "/about_us").permitAll()
+                .antMatchers("/user/**").authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .loginProcessingUrl("/userLogin")
+                .defaultSuccessUrl("/user/profile")
+                .permitAll();
+
         return http.build();
     }
-
 }

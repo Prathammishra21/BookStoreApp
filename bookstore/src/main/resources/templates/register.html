@@ -1,14 +1,27 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{base::layout(~{::section})}">
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section>
+<nav>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="available_books">Available Books</a>
+        <a href="my_books">My Books</a>
+        <a href="about_us">About</a>
+        <a href="book_register">New Books Register</a>
+
+            <a href="login">Login</a>
+            <a href ="register">Register</a>
+       
+    </div>
+</nav>
+
     <div class="container p-4">
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -41,6 +54,6 @@
             </div>
         </div>
     </div>
-</section>
+
 </body>
 </html>

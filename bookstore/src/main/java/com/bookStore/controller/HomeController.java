@@ -18,7 +18,9 @@ import java.security.Principal;
 public class HomeController {
     @Autowired
     private  UserService userService;
+    @Autowired
     private BookService service;
+    @Autowired
     private UserRepo userRepo;
     @ModelAttribute
     public void commonUser(Principal p, Model m) {
@@ -27,9 +29,8 @@ public class HomeController {
             User user = userRepo.findByEmail(email);
             m.addAttribute("user", user);
         }
-
     }
-    @GetMapping("/")
+    @GetMapping("/login")
     public String login(){
         return "login";
     }
