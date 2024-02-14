@@ -19,3 +19,13 @@
         document.getElementById('price').value = '';
         document.getElementById('publisher').value = '';
 }
+
+           $(document).ready(function () {
+               $('ul.topnav > li')
+                       .click(function (e) {
+                   $('ul.topnav > li')
+                       .removeClass('active');
+                   $(this).addClass('active');
+               });
+           });
+

@@ -1,5 +1,5 @@
-.Login/Register {
-    position: absolute;
+.BookRegister{
+  position: absolute;
     right: 0;
 
 }
@@ -258,6 +258,7 @@ h4{
     border-radius: 10px;
 }
 
+
  h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -301,43 +302,4 @@ a {
     text-decoration: none;
 }
 /* Reset default browser styles */
-
-    .container p-3,p-4 {
-            margin-top: 50px;
-        }
-        .card {
-            background-color: #fff;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            border-radius: 10px;
-        }
-        .card-header {
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 10px 10px 0 0;
-            padding: 10px;
-        }
-        .card-body {
-            padding: 20px;
-        }
-        .form-control {
-            margin-bottom: 15px;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .text-danger {
-            color: #dc3545;
-        }
-        .text-success {
-            color: #28a745;
-        }
-
 
