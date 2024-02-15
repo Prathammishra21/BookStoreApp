@@ -43,6 +43,12 @@
               color: rgb(25, 24, 24);
           }
 
+         .topnav-selected{
+          background-color: #8f6161;
+          color: white;
+         }
+
+
           section {
               text-align: center;
               padding-top: 30px; /* Add padding to prevent content from overlapping with the fixed background */
@@ -56,7 +62,7 @@
               color: #ffffff;
 
           }
-           #hero, #books {
+            #books {
               padding-top: 20px;
               padding-bottom: 20px;
               background-color: peachpuff;
@@ -83,20 +89,11 @@
               color: #fff;
               padding: 5px;
           }
-          img {
-              width: 100%; /* Adjust the width of the image */
-              display: block;
-              position: relative;
-              height: 70%;
-              margin-bottom: -20px;
-              padding-top: 0px;
-          }
+
     </style>
 </head>
 
 <body>
-
-
 <nav>
     <div class="topnav">
         <a class="active" href="/">Home</a>
@@ -108,20 +105,6 @@
         </div>
     </div>
 </nav>
-
-<img src="profilepg.png"  alt="pic" >
-<section id="heading">
-    <header>
-        <h1>Ink and Paper Bookstore</h1>
-        <nav>
-            <ul>
-                <li><a href="/about_us"><u>About Us</u></a></li>
-                <li><a href="/available_books"><u>Browse Books</u></a></li>
-                <li><a href="/my_books"><u>My Books</u></a></li>
-            </ul>
-        </nav>
-    </header>
-</section>
 
 <section id="hero">
     <h2>Welcome to Ink and Paper Bookstore</h2>
@@ -152,7 +135,7 @@
 <footer>
     <p>&copy; 2024 Ink and Paper Bookstore. All rights reserved.</p>
 </footer>
-<script src = "script.js"></script>
+
 </body>
 
 </html>

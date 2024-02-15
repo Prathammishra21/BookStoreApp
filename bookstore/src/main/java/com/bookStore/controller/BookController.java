@@ -21,10 +21,10 @@ public class BookController {
     @Autowired
     private MyBookListService myBookService;
 
-@GetMapping("/")
-public String home(){
-    return "home";
-}
+    @GetMapping("/")
+    public String home(){
+        return "home";
+    }
 
     @GetMapping("/book_register")
     public String bookRegister() {
