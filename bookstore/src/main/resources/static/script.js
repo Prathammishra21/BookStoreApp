@@ -20,12 +20,21 @@
         document.getElementById('publisher').value = '';
 }
 
-           $(document).ready(function () {
-               $('ul.topnav > li')
-                       .click(function (e) {
-                   $('ul.topnav > li')
-                       .removeClass('active');
-                   $(this).addClass('active');
-               });
-           });
+ document.addEventListener('DOMContentLoaded', function() {
+     const navItems = document.querySelectorAll('.topnav a');
+     navItems.forEach(item => {
+         item.addEventListener('click', function(event) {
+             event.preventDefault();
+             navItems.forEach(navItem => {
+                 navItem.classList.remove('topnav-selected');
+             });
+             this.classList.add('topnav-selected');
+         });
+     });
+ });
+
+
+
+
+
 

@@ -107,7 +107,7 @@ input[type="submit"]:hover {
     color: black;
 }
 
-.topnav a.active {
+.topnav-selected{
     background-color: #8f6161;
     color: white;
 }
