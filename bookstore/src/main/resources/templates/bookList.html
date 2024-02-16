@@ -23,59 +23,18 @@
         <a href="available_books">Available Books</a>
         <a href="my_books">Out of stock</a>
         <a href="about_us">About</a>
-        <a href="book_register">New Books Register</a>
         <div class="BookRegister">
-            <a href="search">Search</a>
-            <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Search books...">
-                <button onclick="searchBooks()" class="search-button">Search</button>
-            </div>
+            <a href="book_register">New Books Register</a>
         </div>
     </div>
 </nav>
 
-
-
-<div id="searchResults">
-    <!-- Results will be displayed here -->
+<div class="search-container my-3">
+    <input id="search-input" type="text" class="form-control"placeholder="Search your books">
+    <div class ="search-result">
+        //search result goes here
+    </div>
 </div>
-<script>
-    function searchBooks() {
-      var searchInput = document.getElementById("searchInput").value;
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-              var books = JSON.parse(this.responseText);
-              displayBooks(books);
-          }
-      };
-      xhttp.open("GET", "/search?query=" + searchInput, true);
-      xhttp.send();
-  }
-
-  function displayBooks(books) {
-      var searchResultsDiv = document.getElementById("searchResults");
-      searchResultsDiv.innerHTML = "";
-
-      books.forEach(function(book) {
-          var bookDiv = document.createElement("div");
-          bookDiv.classList.add("book");
-
-          var titlePara = document.createElement("p");
-          titlePara.textContent = "Title: " + book.title;
-
-          var authorPara = document.createElement("p");
-          authorPara.textContent = "Author: " + book.author;
-
-          // Add more details if needed
-
-          bookDiv.appendChild(titlePara);
-          bookDiv.appendChild(authorPara);
-
-          searchResultsDiv.appendChild(bookDiv);
-      });
-  }
-</script>
 <div class="booklist">
     <table class="table  table-striped table-hover">
         <thead>
@@ -107,6 +66,38 @@
         </tbody>
     </table>
 </div>
+<script>
+    function searchBooks() {
+      var searchInput = document.getElementById("searchInput").value;
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              var books = JSON.parse(this.responseText);
+              displayBooks(books);
+          }
+      };
+      xhttp.open("GET", "/search?query=" + searchInput, true);
+      xhttp.send();
+  }
+  function displayBooks(books) {
+      var searchResultsDiv = document.getElementById("searchResults");
+      searchResultsDiv.innerHTML = "";
+      books.forEach(function(book) {
+          var bookDiv = document.createElement("div");
+          bookDiv.classList.add("book");
+          var titlePara = document.createElement("p");
+          titlePara.textContent = "Title: " + book.title;
+          var authorPara = document.createElement("p");
+          authorPara.textContent = "Author: " + book.author;
+          bookDiv.appendChild(titlePara);
+          bookDiv.appendChild(authorPara);
+          searchResultsDiv.appendChild(bookDiv);
+      });
+  }
+
+    import { Input, Ripple, initMDB } from "mdb-ui-kit";
+initMDB({ Input, Ripple });
+</script>
 </body>
 
 </html>
