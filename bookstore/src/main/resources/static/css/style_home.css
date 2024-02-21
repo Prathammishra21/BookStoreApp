@@ -1,0 +1,138 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+     padding-left: 0;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+     left: 0;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: peachpuff;
+    color: black;
+}
+
+.topnav-selected {
+    background-color: #8f6161;
+    color: white;
+    transition: 0.3s;
+}
+
+.half-image-page {
+    width: 1688px; /* Set the width of the image to cover half of the page */
+    height: 520px; /* Maintain the aspect ratio */
+    position: relative; /* Fix the position of the image */
+    z-index: -1; /* Set the z-index to ensure the image is behind other content */
+     display: block;
+}
+
+
+#hero {
+    padding: 0px; /* Remove padding to make the image cover the entire page */
+    text-align: center;
+    margin-top: 15px; /* Adjust according to your navbar height */
+     position: relative;
+}
+
+.hero-content {
+   position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white; /* Example color for hero content */
+      text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color:#191919;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color:#191919;
+}
+
+.book {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+header {
+    background-color: #8f6161;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #f5f4f4;
+}
+
+section {
+    text-align: center;
+    padding-top: 30px; /* Add padding to prevent content from overlapping with the fixed background */
+}
+
+#about,
+#contact {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #8f6161;
+    color: #ffffff;
+}
+
+#books {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: peachpuff;
+    color: #444242;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #474040;
+    color: #fff7f7;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+footer {
+    background-color: #363636;
+    color: #fff;
+    padding: 5px;
+}
+
+.profile {
+    position: absolute;
+    right: 0;
+}

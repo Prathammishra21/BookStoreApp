@@ -1,4 +1,4 @@
-.BookRegister {
+.profile {
     position: absolute;
     right: 0;
 }
@@ -109,6 +109,7 @@ input[type="submit"]:hover {
 .topnav-selected {
     background-color: #8f6161;
     color: white;
+    transition: 0.3s;
 }
 
 
@@ -306,128 +307,80 @@ a {
     text-decoration: none;
 }
 
-#hero {
-    background-image: url('profilepg.png');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    color: #2c2c2c;
-    text-align: center;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
 
-#hero h2 {
-    font-size: 3em;
+.dashboard-container {
+    max-width: 600px;
+    margin: 90px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.dashboard-header {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-#hero p {
-    font-size: 1.2em;
+.dashboard-header h1 {
+    color: #333;
 }
 
+.profile-section {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
-.book {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
+.profile-heading {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-detail {
     margin-bottom: 10px;
 }
 
-.search-container {
-    position: relative;
+.detail-label {
+    font-weight: bold;
+    color: #555;
 }
 
-.search-result {
-    position: absolute;
-    background:white;
-    width:100%;
-    padding:10px;
-    border: 1px solid gray;
+.detail-value {
+    color: #333;
+}
+
+.profile-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.edit-info-link, .logout-link {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-info-link:hover, .logout-link:hover {
+    background-color: #555;
 }
 
 
-
-
-
-
- body{
-          background-color: #8f6161;
-        }
-
-          header {
-              background-color: #8f6161;
-              padding: 10px;
-              text-align: center;
-              margin-bottom: 0px;
-
-          }
-
-          header h1 {
-              font-size: 2em;
-              color: #f5f4f4;
-          }
-
-          nav ul {
-              list-style-type: none;
-          }
-
-          nav ul li {
-              display: inline;
-              margin-right: 20px;
-          }
-
-          nav ul li a {
-              text-decoration: none;
-              color: rgb(186, 229, 236);
-              font-weight: bold;
-          }
-
-          nav ul li a:hover {
-              color: rgb(25, 24, 24);
-          }
-
-         .topnav-selected{
-          background-color: #8f6161;
-          color: white;
-         }
-
-
-          section {
-              text-align: center;
-              padding-top: 30px; /* Add padding to prevent content from overlapping with the fixed background */
-
-          }
-
-          #about, #contact{
-              padding-top: 20px;
-              padding-bottom: 20px;
-              background-color: #8f6161;
-              color: #ffffff;
-
-          }
-            #books {
-              padding-top: 20px;
-              padding-bottom: 20px;
-              background-color: peachpuff;
-              color: #444242;
-
-          }
-
-          .btn {
-              display: inline-block;
-              padding: 10px 20px;
-              background-color: #474040;
-              color: #fff7f7;
-              text-decoration: none;
-              border-radius: 5px;
-              transition: background-color 0.3s ease;
-          }
-
-          .btn:hover {
-              background-color: rgb(0, 0, 0);
-          }
-
-          footer {
-              background-color: #363636;
-              color: #fff;
-              padding: 5px;
-          }

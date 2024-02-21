@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<nav>
+    <div class="topnav">
+        <a class="active" href="home">Home</a>
+        <a href="available_books">Available Books</a>
+        <a href="my_books">Out of stock</a>
+        <a href="book_register">New Books Register</a>
+        <div class="profile">
+            <a href="profile">Profile</a>
+        </div>
+    </div>
+</nav>
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1>User Dashboard</h1>
+    </div>
+<section class="profile-section">
+    <div class="profile-info">
+        <div class="profile-detail">
+            <span class="detail-label">Name:</span>
+            <span class="detail-value" th:text="${user.name}"></span>
+        </div>
+        <div class="profile-detail">
+            <span class="detail-label">Email:</span>
+            <span class="detail-value" th:text="${user.email}"></span>
+        </div>
+        <div class="profile-detail">
+            <span class="detail-label">Mob No:</span>
+            <span class="detail-value" th:text="${user.mobileNo}"></span>
+        </div>
+        <div class="profile-detail">
+            <span class="detail-label">Role:</span>
+            <span class="detail-value" th:text="${user.role}"></span>
+        </div>
+    </div>
+    <div class="profile-actions">
+        <a href="/edit_profile" class="edit-info-link">Edit</a>
+        <a href="/logout" class="logout-link">Logout</a>
+    </div>
+</section>
+    </div>
+</body>
+</html>

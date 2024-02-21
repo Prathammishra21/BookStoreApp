@@ -23,17 +23,18 @@ public class BookController {
     @Autowired
     private MyBookListService myBookService;
 
-    @GetMapping("/")
+    @GetMapping("user/home")
     public String home() {
         return "home";
     }
 
-    @GetMapping("/book_register")
+    @GetMapping("/user/book_register")
     public String bookRegister() {
         return "bookRegister";
     }
 
-    @GetMapping("/available_books")
+    @GetMapping("/user/available_books")
+    @ResponseBody
     public ModelAndView getAllBook() {
         List<Book> list = service.getAllBook();
         return new ModelAndView("bookList", "book", list);
@@ -42,27 +43,23 @@ public class BookController {
     @PostMapping("/save")
     public String addBook(@ModelAttribute Book b) {
         service.save(b);
-        return "redirect:/available_books";
+        return "redirect:/user/available_books";
     }
 
-    @GetMapping("/my_books")
+    @GetMapping("/user/my_books")
     public String getMyBooks(Model model) {
         List<MyBookList> list = myBookService.getAllMyBooks();
         model.addAttribute("book", list);
         return "myBooks";
     }
 
-    @GetMapping("/about_us")
-    public String aboutus() {
-        return "aboutus";
-    }
 
     @RequestMapping("/mylist/{id}")
     public String getMyList(@PathVariable("id") int id) {
         Book b = service.getBookById(id);
         MyBookList mb = new MyBookList(b.getId(), b.getName(), b.getAuthor(), b.getEdition(), b.getPrice(), b.getPublisher());
         myBookService.saveMyBooks(mb);
-        return "redirect:/my_books";
+        return "redirect:/user/my_books";
     }
 
     @RequestMapping("/editBook/{id}")
@@ -75,6 +72,6 @@ public class BookController {
     @RequestMapping("/deleteBook/{id}")
     public String deleteBook(@PathVariable("id") int id) {
         service.deleteById(id);
-        return "redirect:/available_books";
+        return "redirect:/user/available_books";
     }
     }

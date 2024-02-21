@@ -1,27 +1,27 @@
 <!doctype html>
-<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<html lang="en" xmlns:th="https://www.thymeleaf.com"
+      th:fragment="layout(content)">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Store</title>
     <script src="https://kit.fontawesome.com/0faddc1af8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 
 <body>
 <div class="full-screen-image">
-    <img src="mybook.png" alt="Background Image">
+    <img th:src="@{/images/mybook.png}" alt="Background Image"/>
 </div>
-
 <nav>
     <div class="topnav">
-        <a class="active" href="/">Home</a>
+        <a class="active" href="home">Home</a>
         <a href="available_books">Available Books</a>
         <a href="my_books">Out of stock</a>
-        <a href="about_us">About</a>
-        <div class="BookRegister">
-            <a href="book_register">New Books Register</a>
+        <a href="book_register">New Books Register</a>
+        <div class="profile">
+            <a href="profile">Profile</a>
         </div>
     </div>
 </nav>
