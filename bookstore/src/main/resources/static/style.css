@@ -343,3 +343,91 @@ a {
     padding:10px;
     border: 1px solid gray;
 }
+
+
+
+
+
+
+ body{
+          background-color: #8f6161;
+        }
+
+          header {
+              background-color: #8f6161;
+              padding: 10px;
+              text-align: center;
+              margin-bottom: 0px;
+
+          }
+
+          header h1 {
+              font-size: 2em;
+              color: #f5f4f4;
+          }
+
+          nav ul {
+              list-style-type: none;
+          }
+
+          nav ul li {
+              display: inline;
+              margin-right: 20px;
+          }
+
+          nav ul li a {
+              text-decoration: none;
+              color: rgb(186, 229, 236);
+              font-weight: bold;
+          }
+
+          nav ul li a:hover {
+              color: rgb(25, 24, 24);
+          }
+
+         .topnav-selected{
+          background-color: #8f6161;
+          color: white;
+         }
+
+
+          section {
+              text-align: center;
+              padding-top: 30px; /* Add padding to prevent content from overlapping with the fixed background */
+
+          }
+
+          #about, #contact{
+              padding-top: 20px;
+              padding-bottom: 20px;
+              background-color: #8f6161;
+              color: #ffffff;
+
+          }
+            #books {
+              padding-top: 20px;
+              padding-bottom: 20px;
+              background-color: peachpuff;
+              color: #444242;
+
+          }
+
+          .btn {
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: #474040;
+              color: #fff7f7;
+              text-decoration: none;
+              border-radius: 5px;
+              transition: background-color 0.3s ease;
+          }
+
+          .btn:hover {
+              background-color: rgb(0, 0, 0);
+          }
+
+          footer {
+              background-color: #363636;
+              color: #fff;
+              padding: 5px;
+          }
