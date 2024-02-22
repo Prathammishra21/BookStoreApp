@@ -69,6 +69,6 @@ public class HomeController {
             // System.out.println("error in server");
             session.setAttribute("msg", "Something wrong server");
         }
-        return "redirect:/register";
+        return "/register";
     }
 }

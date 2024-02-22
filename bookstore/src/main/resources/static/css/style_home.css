@@ -38,7 +38,7 @@ html {
 }
 
 .half-image-page {
-    width: 1688px; /* Set the width of the image to cover half of the page */
+    width: 2113px; /* Set the width of the image to cover half of the page */
     height: 520px; /* Maintain the aspect ratio */
     position: relative; /* Fix the position of the image */
     z-index: -1; /* Set the z-index to ensure the image is behind other content */
