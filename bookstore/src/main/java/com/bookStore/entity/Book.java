@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 
 
 @Entity
@@ -12,15 +13,15 @@ public class Book {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    @NotBlank
+    @NotNull
     private String name;
-    @NotBlank
+    @NotNull
     private String author;
-    @NotBlank
+    @NotNull
     private String edition;
-    @NotBlank
+    @NotNull
     private String price;
-    @NotBlank
+    @NotNull
     private String publisher;
     public Book(int id, String name, String author,String edition, String price,String publisher) {
         super();

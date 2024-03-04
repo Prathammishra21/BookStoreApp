@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
 @Entity
 public class User {
 
@@ -16,7 +17,9 @@ public class User {
 
     private String mobileNo;
 
+
     private String email;
+
 
     private String password;
 
