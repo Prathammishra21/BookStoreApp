@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
-    <script src ="script.js"></script>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script src="script.js"></script>
 
     <title>Book Store</title>
 </head>
@@ -26,7 +26,7 @@
 </nav>
 </div>
 <div class="container10">
-    <center> <h2>Book Information Form</h2></center>
+    <center><h2>Book Information Form</h2></center>
     <form class="col-md-6 offset-md-3" th:action="@{/save}" method="post" onsubmit="return validateForm()">
         <div class="form-group">
             <label for="name">Name:</label>
@@ -48,11 +48,13 @@
             <label for="publisher">Publisher:</label>
             <input type="text" id="publisher" name="publisher" required>
         </div>
-        <center> <div class="text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <center>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
 
-            <button type="submit" value="Cancel" onclick="clearForm()">Cancel</button>
-        </div></center>
+                <button type="submit" value="Cancel" onclick="clearForm()">Cancel</button>
+            </div>
+        </center>
     </form>
 </div>
 

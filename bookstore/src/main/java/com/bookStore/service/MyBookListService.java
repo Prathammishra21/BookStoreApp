@@ -17,7 +17,7 @@ public class MyBookListService {
         mybook.save(book);
     }
 
-    public List<MyBookList> getAllMyBooks(){
+    public List<MyBookList> getAllMyBooks() {
         return mybook.findAll();
     }
 

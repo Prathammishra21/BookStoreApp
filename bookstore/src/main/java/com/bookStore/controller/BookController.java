@@ -74,4 +74,4 @@ public class BookController {
         service.deleteById(id);
         return "redirect:/user/available_books";
     }
-    }
+}

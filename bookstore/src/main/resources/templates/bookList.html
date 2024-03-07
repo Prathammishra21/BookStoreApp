@@ -11,7 +11,7 @@
 
 <body>
 <div class="full-screen-image">
-    <img th:src="@{/images/available.jpg}" />
+    <img th:src="@{/images/available.jpg}"/>
 </div>
 <nav>
     <div class="topnav">
@@ -49,8 +49,10 @@
             <td th:text="${b.price}"></td>
             <td th:text="${b.publisher}"></td>
             <td><a class="btn btn-secondary btn-sm" th:href="@{/mylist/{id}(id=${b.id})}">Add to out of stock</a>
-                <a style="color:blue" th:href="@{/editBook/{id}(id=${b.id})}"><i class="fa-solid fa-pen-to-square ms-4"></i></a>
-                <a style="color:red" th:href="@{/deleteBook/{id}(id=${b.id})}"><i class="fa-solid fa-trash ms-4"></i></a>
+                <a style="color:blue" th:href="@{/editBook/{id}(id=${b.id})}"><i
+                        class="fa-solid fa-pen-to-square ms-4"></i></a>
+                <a style="color:red" th:href="@{/deleteBook/{id}(id=${b.id})}"><i
+                        class="fa-solid fa-trash ms-4"></i></a>
             </td>
 
         </tr>

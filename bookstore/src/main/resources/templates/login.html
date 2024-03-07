@@ -15,7 +15,8 @@
                 <div class="card">
                     <div class="card-header text-center fs-4">Login Page</div>
                     <div th:if="${param.error}">
-                        <p class="text-center text-danger fs-5" th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message}"></p>
+                        <p class="text-center text-danger fs-5"
+                           th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message}"></p>
                     </div>
                     <div th:if="${param.logout}">
                         <p class="text-center text-success fs-5">Logout Successfully</p>

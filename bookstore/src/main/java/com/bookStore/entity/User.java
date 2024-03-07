@@ -17,9 +17,7 @@ public class User {
 
     private String mobileNo;
 
-
     private String email;
-
 
     private String password;
 
