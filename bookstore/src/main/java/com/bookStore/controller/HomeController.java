@@ -45,7 +45,7 @@ public class HomeController {
 
     @GetMapping("/signin")
     public String login() {
-        return "/Login_Register_Page/login";
+        return "login";
     }
 
     @GetMapping("/user/profile")
