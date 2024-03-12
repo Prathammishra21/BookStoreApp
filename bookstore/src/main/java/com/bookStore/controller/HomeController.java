@@ -35,17 +35,17 @@ public class HomeController {
 
     @GetMapping("/about")
     public String index() {
-        return "about";
+        return "/base_Profile/about";
     }
 
     @GetMapping("/")
     public String register() {
-        return "register";
+        return "/Login_Register_Page/register";
     }
 
     @GetMapping("/signin")
     public String login() {
-        return "login";
+        return "/Login_Register_Page/login";
     }
 
     @GetMapping("/user/profile")
@@ -53,13 +53,13 @@ public class HomeController {
         String email = p.getName();
         User user = userRepo.findByEmail(email);
         m.addAttribute("user", user);
-        return "profile";
+        return "/base_Profile/profile";
     }
 
     @PostMapping("/saveUser")
     public String saveUser(@Valid @ModelAttribute User user, BindingResult result, HttpSession session, Model m) {
         if (result.hasErrors()) {
-            return "register";
+            return "/Login_Register_Page/register";
         }
         User u = userService.saveUser(user);
 
@@ -69,6 +69,6 @@ public class HomeController {
         } else {
             session.setAttribute("msg", "Something gone wrong");
         }
-        return "/register";
+        return "/Login_Register_Page/register";
     }
 }

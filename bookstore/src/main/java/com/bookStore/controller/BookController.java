@@ -25,32 +25,32 @@ public class BookController {
 
     @GetMapping("user/home")
     public String home() {
-        return "home";
+        return "/home_page/home";
     }
 
     @GetMapping("/user/book_register")
     public String bookRegister() {
-        return "bookRegister";
+        return "/Book_Pages/bookRegister";
     }
 
     @GetMapping("/user/available_books")
     @ResponseBody
     public ModelAndView getAllBook() {
         List<Book> list = service.getAllBook();
-        return new ModelAndView("bookList", "book", list);
+        return new ModelAndView("/Book_Pages/bookList", "book", list);
     }
 
     @PostMapping("/save")
     public String addBook(@ModelAttribute Book b) {
         service.save(b);
-        return "redirect:/user/available_books";
+        return "redirect:/user/Book_Pages/available_books";
     }
 
     @GetMapping("/user/my_books")
     public String getMyBooks(Model model) {
         List<MyBookList> list = myBookService.getAllMyBooks();
         model.addAttribute("book", list);
-        return "myBooks";
+        return "/Book_Pages/myBooks";
     }
 
 
@@ -66,7 +66,7 @@ public class BookController {
     public String editBook(@PathVariable("id") int id, Model model) {
         Book b = service.getBookById(id);
         model.addAttribute("book", b);
-        return "bookEdit";
+        return "/Book_Pages/bookEdit";
     }
 
     @RequestMapping("/deleteBook/{id}")
